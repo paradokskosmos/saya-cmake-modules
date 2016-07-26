@@ -1,4 +1,4 @@
-# - Try to find GDK 2.0
+# - Try to find GDK 3.0
 # Once done, this will define
 #
 #  GDK_FOUND - system has GDK
@@ -13,25 +13,26 @@ libfind_package(GDK Pango)
 libfind_package(GDK GIO)
 
 # Use pkg-config to get hints about paths
-libfind_pkg_check_modules(GDK_PKGCONF gdk-2.0)
+libfind_pkg_check_modules(GDK_PKGCONF gdk-3.0)
 
 # Main include dir
 find_path(GDK_INCLUDE_DIR
   NAMES gdk/gdk.h
   HINTS ${GDK_PKGCONF_INCLUDE_DIRS}
-  PATH_SUFFIXES gtk-2.0
+  PATH_SUFFIXES gtk-3.0
 )
 
 # Glib-related libraries also use a separate config header, which is in lib dir
 find_path(GDKConfig_INCLUDE_DIR
   NAMES gdkconfig.h
   HINTS ${GDK_PKGCONF_INCLUDE_DIRS} /usr
-  PATH_SUFFIXES lib/gtk-2.0/include
+  PATH_SUFFIXES lib/gtk-3.0/include include/gtk-3.0/gdk
 )
 
 # Finally the library itself
 find_library(GDK_LIBRARY
-  NAMES gdk-x11-2.0
+  # NAMES gdk-x11-3.0
+  NAMES gdk-3
   HINTS ${GDK_PKGCONF_LIBRARY_DIRS}
 )
 

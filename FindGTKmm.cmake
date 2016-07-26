@@ -1,4 +1,4 @@
-# - Try to find GTKmm 2.4
+# - Try to find GTKmm 3.0
 # Once done, this will define
 #
 #  GTKmm_FOUND - system has GTKmm
@@ -16,25 +16,25 @@ libfind_package(GTKmm Pangomm)
 libfind_package(GTKmm Atkmm)
 
 # Use pkg-config to get hints about paths
-libfind_pkg_check_modules(GTKmm_PKGCONF gtkmm-2.4)
+libfind_pkg_check_modules(GTKmm_PKGCONF gtkmm-3.0)
 
 # Main include dir
 find_path(GTKmm_INCLUDE_DIR
   NAMES gtkmm.h
   HINTS ${GTKmm_PKGCONF_INCLUDE_DIRS}
-  PATH_SUFFIXES gtkmm-2.4
+  PATH_SUFFIXES gtkmm-3.0
 )
 
 # Glib-related libraries also use a separate config header, which is in lib dir
 find_path(GTKmmConfig_INCLUDE_DIR
   NAMES gtkmmconfig.h
   HINTS ${GTKmm_PKGCONF_INCLUDE_DIRS} /usr
-  PATH_SUFFIXES lib/gtkmm-2.4/include
+  PATH_SUFFIXES lib/gtkmm-3.0/include
 )
 
 # Finally the library itself
 find_library(GTKmm_LIBRARY
-  NAMES gtkmm-2.4
+  NAMES gtkmm-3.0
   HINTS ${GTKmm_PKGCONF_LIBRARY_DIRS}
 )
 

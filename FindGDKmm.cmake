@@ -1,4 +1,4 @@
-# - Try to find GDKmm 2.4
+# - Try to find GDKmm 3.0
 # Once done, this will define
 #
 #  GDKmm_FOUND - system has GDKmm
@@ -14,25 +14,25 @@ libfind_package(GDKmm Pangomm)
 libfind_package(GDKmm Cairomm)
 
 # Use pkg-config to get hints about paths
-libfind_pkg_check_modules(GDKmm_PKGCONF gdkmm-2.4)
+libfind_pkg_check_modules(GDKmm_PKGCONF gdkmm-3.0)
 
 # Main include dir
 find_path(GDKmm_INCLUDE_DIR
   NAMES gdkmm.h
   HINTS ${GDKmm_PKGCONF_INCLUDE_DIRS}
-  PATH_SUFFIXES gdkmm-2.4
+  PATH_SUFFIXES gdkmm-3.0
 )
 
 # Glib-related libraries also use a separate config header, which is in lib dir
 find_path(GDKmmConfig_INCLUDE_DIR
   NAMES gdkmmconfig.h
   HINTS ${GDKmm_PKGCONF_INCLUDE_DIRS} /usr
-  PATH_SUFFIXES lib/gdkmm-2.4/include
+  PATH_SUFFIXES lib/gdkmm-3.0/include
 )
 
 # Finally the library itself
 find_library(GDKmm_LIBRARY
-  NAMES gdkmm-2.4
+  NAMES gdkmm-3.0
   HINTS ${GDKmm_PKGCONF_LIBRARY_DIRS}
 )
 

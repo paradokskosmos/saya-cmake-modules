@@ -37,7 +37,23 @@ FIND_PATH( MAGICK++_INCLUDE_DIR Magick++.h
   /usr/include/ImageMagick-6
   /usr/include/Magick++
   /usr/include/
-  )
+)
+FIND_PATH( MAGICK++_BASECONFIG_DIR magick/magick-baseconfig.h
+  "$ENV{MAGICK++_LOCATION}/Magick++"
+  "$ENV{MAGICK++_LOCATION}/include/"
+  "$ENV{MAGICK_LOCATION}/Magick++"
+  "$ENV{MAGICK_LOCATION}/include/Magick++"
+  "$ENV{MAGICK_LOCATION}/include/"
+  "$ENV{MAGICK_HOME}/include/"
+  /usr/include/ImageMagick-6
+  /usr/include/Magick++
+  /usr/include
+  /usr/include/x86_64-linux-gnu/ImageMagick-6
+)
+
+# TODO: HACK
+STRING(REGEX REPLACE "/magick$" "" MAGICK++_BASECONFIG_DIR ${MAGICK++_BASECONFIG_DIR})
+SET(MAGICK++_INCLUDE_DIR ${MAGICK++_INCLUDE_DIR} ${MAGICK++_BASECONFIG_DIR})
 
 # FIND_LIBRARY( Magick Magick
   # PATHS
@@ -120,7 +136,7 @@ IF(NOT MAGICK++_FOUND)
       MESSAGE(STATUS "ImageMagick was not found.")
     ENDIF(Magick_FIND_REQUIRED)
   ENDIF(NOT Magick_FIND_QUIETLY)
-ENDIF(NOT MAGICK_FOUND)
+ENDIF(NOT MAGICK++_FOUND)
 
 
 #####

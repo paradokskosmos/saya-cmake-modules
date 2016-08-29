@@ -2,8 +2,8 @@
 # Once done, this will define
 #
 #  Pangomm_FOUND - system has Pangomm
-#  Pangomm_INCLUDE_DIRS - the Pangomm include directories
-#  Pangomm_LIBRARIES - link these to use Pangomm
+#  Pangomm_INCLUDE_DIR - the Pangomm include directories
+#  Pangomm_LIBRARY - link these to use Pangomm
 
 include(LibFindMacros)
 
@@ -30,7 +30,7 @@ find_library(Pangomm_LIBRARY
 
 # Set the include dir variables and the libraries and let libfind_process do the rest.
 # NOTE: Singular variables for this library, plural for libraries this this lib depends on.
-set(Pangomm_PROCESS_INCLUDES Pangomm_INCLUDE_DIR Pango_INCLUDE_DIRS Cairomm_INCLUDE_DIRS Glibmm_INCLUDE_DIRS)
-set(Pangomm_PROCESS_LIBS Pangomm_LIBRARY Pango_LIBRARIES Cairomm_LIBRARIES Glibmm_LIBRARIES)
+set(Pangomm_PROCESS_INCLUDES Pangomm_INCLUDE_DIR Pango_INCLUDE_DIR Cairomm_INCLUDE_DIR Glibmm_INCLUDE_DIR)
+set(Pangomm_PROCESS_LIBS Pangomm_LIBRARY Pango_LIBRARY Cairomm_LIBRARY Glibmm_LIBRARY)
 libfind_process(Pangomm)
 

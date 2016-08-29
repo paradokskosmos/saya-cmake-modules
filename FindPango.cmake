@@ -2,8 +2,8 @@
 # Once done, this will define
 #
 #  Pango_FOUND - system has Pango
-#  Pango_INCLUDE_DIRS - the Pango include directories
-#  Pango_LIBRARIES - link these to use Pango
+#  Pango_INCLUDE_DIR - the Pango include directories
+#  Pango_LIBRARY - link these to use Pango
 
 include(LibFindMacros)
 

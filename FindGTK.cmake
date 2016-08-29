@@ -2,8 +2,8 @@
 # Once done, this will define
 #
 #  GTK_FOUND - system has GTK
-#  GTK_INCLUDE_DIRS - the GTK include directories
-#  GTK_LIBRARIES - link these to use GTK
+#  GTK_INCLUDE_DIR - the GTK include directories
+#  GTK_LIBRARY - link these to use GTK
 
 include(LibFindMacros)
 
@@ -33,7 +33,7 @@ find_library(GTK_LIBRARY
 
 # Set the include dir variables and the libraries and let libfind_process do the rest.
 # NOTE: Singular variables for this library, plural for libraries this this lib depends on.
-set(GTK_PROCESS_INCLUDES GTK_INCLUDE_DIR GDK_INCLUDE_DIRS Cairo_INCLUDE_DIRS Atk_INCLUDE_DIRS GIO_INCLUDE_DIRS Pango_INCLUDE_DIRS)
-set(GTK_PROCESS_LIBS GTK_LIBRARY GDK_LIBRARIES Cairo_LIBRARIES Atk_LIBRARIES GIO_LIBRARIES Pango_LIBRARIES)
+set(GTK_PROCESS_INCLUDES GTK_INCLUDE_DIR GDK_INCLUDE_DIR Cairo_INCLUDE_DIR Atk_INCLUDE_DIR GIO_INCLUDE_DIR Pango_INCLUDE_DIR)
+set(GTK_PROCESS_LIBS GTK_LIBRARY GDK_LIBRARY Cairo_LIBRARY Atk_LIBRARY GIO_LIBRARY Pango_LIBRARY)
 libfind_process(GTK)
 

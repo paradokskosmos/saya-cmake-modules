@@ -2,7 +2,7 @@
 # Once done, this will define
 #
 #  GDK-PixBuf_FOUND - system has GDK-PixBuf
-#  GDK-PixBuf_INCLUDE_DIRS - the GDK-PixBuf include directories
+#  GDK-PixBuf_INCLUDE_DIR - the GDK-PixBuf include directories
 #  GDK-PixBuf_LIBRARIES - link these to use GDK-PixBuf
 
 include(LibFindMacros)

@@ -2,8 +2,8 @@
 # Once done, this will define
 #
 #  Atkmm_FOUND - system has Atkmm
-#  Atkmm_INCLUDE_DIRS - the Atkmm include directories
-#  Atkmm_LIBRARIES - link these to use Atkmm
+#  Atkmm_INCLUDE_DIR - the Atkmm include directories
+#  Atkmm_LIBRARY - link these to use Atkmm
 
 include(LibFindMacros)
 
@@ -29,7 +29,7 @@ find_library(Atkmm_LIBRARY
 
 # Set the include dir variables and the libraries and let libfind_process do the rest.
 # NOTE: Singular variables for this library, plural for libraries this this lib depends on.
-set(Atkmm_PROCESS_INCLUDES Atkmm_INCLUDE_DIR Atk_INCLUDE_DIRS Glibmm_INCLUDE_DIRS)
-set(Atkmm_PROCESS_LIBS Atkmm_LIBRARY Atk_LIBRARIES Glibmm_LIBRARIES)
+set(Atkmm_PROCESS_INCLUDES Atkmm_INCLUDE_DIR Atk_INCLUDE_DIR Glibmm_INCLUDE_DIR)
+set(Atkmm_PROCESS_LIBS Atkmm_LIBRARY Atk_LIBRARY Glibmm_LIBRARY)
 libfind_process(Atkmm)
 

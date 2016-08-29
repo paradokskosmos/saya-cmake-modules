@@ -2,8 +2,8 @@
 # Once done, this will define
 #
 #  GIOmm_FOUND - system has GIOmm
-#  GIOmm_INCLUDE_DIRS - the GIOmm include directories
-#  GIOmm_LIBRARIES - link these to use GIOmm
+#  GIOmm_INCLUDE_DIR - the GIOmm include directories
+#  GIOmm_LIBRARY - link these to use GIOmm
 
 include(LibFindMacros)
 
@@ -29,7 +29,7 @@ find_library(GIOmm_LIBRARY
 
 # Set the include dir variables and the libraries and let libfind_process do the rest.
 # NOTE: Singular variables for this library, plural for libraries this this lib depends on.
-set(GIOmm_PROCESS_INCLUDES GIOmm_INCLUDE_DIR GIO_INCLUDE_DIRS Glibmm_INCLUDE_DIRS)
-set(GIOmm_PROCESS_LIBS GIOmm_LIBRARY GIO_LIBRARIES Glibmm_LIBRARIES)
+set(GIOmm_PROCESS_INCLUDES GIOmm_INCLUDE_DIR GIO_INCLUDE_DIR Glibmm_INCLUDE_DIR)
+set(GIOmm_PROCESS_LIBS GIOmm_LIBRARY GIO_LIBRARY Glibmm_LIBRARY)
 libfind_process(GIOmm)
 

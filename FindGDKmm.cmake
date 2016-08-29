@@ -2,8 +2,8 @@
 # Once done, this will define
 #
 #  GDKmm_FOUND - system has GDKmm
-#  GDKmm_INCLUDE_DIRS - the GDKmm include directories
-#  GDKmm_LIBRARIES - link these to use GDKmm
+#  GDKmm_INCLUDE_DIR - the GDKmm include directories
+#  GDKmm_LIBRARY - link these to use GDKmm
 
 include(LibFindMacros)
 
@@ -38,7 +38,7 @@ find_library(GDKmm_LIBRARY
 
 # Set the include dir variables and the libraries and let libfind_process do the rest.
 # NOTE: Singular variables for this library, plural for libraries this this lib depends on.
-set(GDKmm_PROCESS_INCLUDES GDKmm_INCLUDE_DIR GDKmmConfig_INCLUDE_DIR GDK_INCLUDE_DIRS Glibmm_INCLUDE_DIRS Pangomm_INCLUDE_DIRS Cairomm_INCLUDE_DIRS)
-set(GDKmm_PROCESS_LIBS GDKmm_LIBRARY GDK_LIBRARIES Glibmm_LIBRARIES Pangomm_LIBRARIES Cairomm_LIBRARIES)
+set(GDKmm_PROCESS_INCLUDES GDKmm_INCLUDE_DIR GDKmmConfig_INCLUDE_DIR GDK_INCLUDE_DIR Glibmm_INCLUDE_DIR Pangomm_INCLUDE_DIR Cairomm_INCLUDE_DIR)
+set(GDKmm_PROCESS_LIBS GDKmm_LIBRARY GDK_LIBRARY Glibmm_LIBRARY Pangomm_LIBRARY Cairomm_LIBRARY)
 libfind_process(GDKmm)
 

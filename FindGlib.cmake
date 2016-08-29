@@ -2,8 +2,8 @@
 # Once done, this will define
 #
 #  Glib_FOUND - system has Glib
-#  Glib_INCLUDE_DIRS - the Glib include directories
-#  Glib_LIBRARIES - link these to use Glib
+#  Glib_INCLUDE_DIR - the Glib include directories
+#  Glib_LIBRARY - link these to use Glib
 
 include(LibFindMacros)
 

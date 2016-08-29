@@ -2,8 +2,8 @@
 # Once done, this will define
 #
 #  Glibmm_FOUND - system has Glibmm
-#  Glibmm_INCLUDE_DIRS - the Glibmm include directories
-#  Glibmm_LIBRARIES - link these to use Glibmm
+#  Glibmm_INCLUDE_DIR - the Glibmm include directories
+#  Glibmm_LIBRARY - link these to use Glibmm
 
 include(LibFindMacros)
 
@@ -35,5 +35,6 @@ find_library(Glibmm_LIBRARY
 )
 
 set(Glibmm_PROCESS_INCLUDES GlibmmConfig_INCLUDE_DIR)
+set(Glibmm_PROCESS_LIBS Glibmm_LIBRARY)
 libfind_process(Glibmm)
 

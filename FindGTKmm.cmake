@@ -3,7 +3,7 @@
 #
 #  GTKmm_FOUND - system has GTKmm
 #  GTKmm_INCLUDE_DIRS - the GTKmm include directories
-#  GTKmm_LIBRARIES - link these to use GTKmm
+#  GTKmm_LIBRARY - link these to use GTKmm
 
 include(LibFindMacros)
 
@@ -40,7 +40,7 @@ find_library(GTKmm_LIBRARY
 
 # Set the include dir variables and the libraries and let libfind_process do the rest.
 # NOTE: Singular variables for this library, plural for libraries this this lib depends on.
-set(GTKmm_PROCESS_INCLUDES GTKmm_INCLUDE_DIR GTKmmConfig_INCLUDE_DIR GTK_INCLUDE_DIRS Glibmm_INCLUDE_DIRS GIOmm_INCLUDE_DIRS GDKmm_INCLUDE_DIRS Pangomm_INCLUDE_DIRS Atkmm_INCLUDE_DIRS)
-set(GTKmm_PROCESS_LIBS GTKmm_LIBRARY GTK_LIBRARIES Glibmm_LIBRARIES GIOmm_LIBRARIES GDKmm_LIBRARIES Pangomm_LIBRARIES Atkmm_LIBRARIES)
+set(GTKmm_PROCESS_INCLUDES GTKmm_INCLUDE_DIR GTKmmConfig_INCLUDE_DIR GTK_INCLUDE_DIR Glibmm_INCLUDE_DIR GIOmm_INCLUDE_DIR GDKmm_INCLUDE_DIR Pangomm_INCLUDE_DIR Atkmm_INCLUDE_DIR)
+set(GTKmm_PROCESS_LIBS GTKmm_LIBRARY GTK_LIBRARY Glibmm_LIBRARY GIOmm_LIBRARY GDKmm_LIBRARY Pangomm_LIBRARY Atkmm_LIBRARY)
 libfind_process(GTKmm)
 

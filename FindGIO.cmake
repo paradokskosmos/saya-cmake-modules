@@ -2,8 +2,8 @@
 # Once done, this will define
 #
 #  GIO_FOUND - system has GIO
-#  GIO_INCLUDE_DIRS - the GIO include directories
-#  GIO_LIBRARIES - link these to use GIO
+#  GIO_INCLUDE_DIR - the GIO include directories
+#  GIO_LIBRARY - link these to use GIO
 
 include(LibFindMacros)
 
@@ -21,7 +21,7 @@ find_library(GIO_LIBRARY
 
 # Set the include dir variables and the libraries and let libfind_process do the rest.
 # NOTE: Singular variables for this library, plural for libraries this this lib depends on.
-set(GIO_PROCESS_INCLUDES Glib_INCLUDE_DIRS)
-set(GIO_PROCESS_LIBS GIO_LIBRARY Glib_LIBRARIES)
+set(GIO_PROCESS_INCLUDES GIO_INCLUDE_DIR Glib_INCLUDE_DIR)
+set(GIO_PROCESS_LIBS GIO_LIBRARY Glib_LIBRARY)
 libfind_process(GIO)
 

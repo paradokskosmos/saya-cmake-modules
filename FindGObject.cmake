@@ -3,7 +3,7 @@
 #
 #  GObject_FOUND - system has GObject
 #  GObject_INCLUDE_DIRS - the GObject include directories
-#  GObject_LIBRARIES - link these to use GObject
+#  GObject_LIBRARY - link these to use GObject
 
 include(LibFindMacros)
 
@@ -22,7 +22,7 @@ find_library(GObject_LIBRARY
 find_path(GObject_INCLUDE_DIR
   NAMES gobject/gobject.h
   HINTS ${GObject_PKGCONF_INCLUDE_DIRS}
-  HINTS ${Glib_INCLUDE_DIRS}
+  HINTS ${Glib_INCLUDE_DIR}
 )
 
 set(GObject_PROCESS_INCLUDES GObject_INCLUDE_DIR Glib_INCLUDE_DIR)
